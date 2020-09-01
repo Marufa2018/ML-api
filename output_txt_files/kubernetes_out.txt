@@ -1,14 +1,7 @@
-$ kubectl run api --image=mars20/api --port=80
-kubectl run --generator=deployment/apps.v1 is DEPRECATED and will be removed in a future version. Use kubectl run --generator=run-pod/v1 or kubectl create instead.
-deployment.apps/api created
-$ kubectl get pods
-NAME                  READY   STATUS              RESTARTS   AGE
-api-b488fb84d-pwr7g   0/1     ContainerCreating   0          31s
-$ kubectl expose deployment api --type=LoadBalancer --port=8000 --target-port=80
-service/api exposed
-$ kubectl get deployments
+
+<output for kubectl get deployments>
 NAME   READY   UP-TO-DATE   AVAILABLE   AGE
 api    0/1     1            0           55s
-$ kubectl get pods
+<output for kubectl get pods>
 NAME                  READY   STATUS    RESTARTS   AGE
 api-b488fb84d-pwr7g   1/1     Running   0          73s
